@@ -11,7 +11,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(20, 50px);
+    grid-template-rows: repeat(15, 50px);
 }
 
 header {
@@ -31,21 +31,25 @@ header h1 {
 
 article {
     grid-column: 1/11;
-    grid-row: 3/21;
-    background-color: whitesmoke;
+    grid-row: 3/16;
+    background-color: lightgray;
     padding: 10px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .rockstarcard {
     flex: 0 0 250px;
     height: 500px;
     margin: 10px;
-    padding: 10px;
-    background-color: lightgrey;
+    padding: 20px;
+    background-color: whitesmoke;
     border: 1px solid black;
+}
+
+.rockstarcard:hover {
+    border: 3px solid black;
 }
 
 .rockstarcard h4 {
@@ -57,5 +61,28 @@ article {
     height: 200px;
     margin-top: 10px;
     margin-left: 28px;
-    border: 2px solid purple
+    border: 5px solid rgb(182, 158, 184);
+    border-radius: 33px;
+}
+
+@media screen and (min-width: 1893px) {
+    .rockstarcard {
+        margin-left: auto;
+        margin-right: auto;
+}
+}
+@media screen and (max-width: 1891px) {
+    article {
+        grid-row: 3/26;
+    }
+}
+@media screen and (max-width: 955px) {
+    article {
+        grid-row: 3/36;
+    }
+}
+@media screen and (max-width: 643px) {
+    article {
+        grid-row: 3/66;
+        }
 }
